@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2i-4u)lg5+=(g36c8o-8oyvjfbogo6mz*$@%_d)z#@6f)k3+7-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'website'
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,20 @@ WSGI_APPLICATION = 'learningaws.wsgi.application'
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'learn',
+        'USER': 'admin',
+        'PASSWORD': 'riya1234',
+        'HOST': 'learn-db.c2alxhjq6azg.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'use_unicode': True
+        },
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

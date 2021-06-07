@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    restart: always
+    # command: python manage.py runserver 0.0.0.0:8001
+    entrypoint: ./docker-entrypoint.sh
+    volumes:
+      - .:/learningaws
+    ports:
+      - "8000:8000"
+
