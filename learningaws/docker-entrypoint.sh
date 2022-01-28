@@ -6,6 +6,11 @@ echo "Collect static files"
 echo "Collect static files finished...."
 
 # Apply database migrations
+echo "Starting make database migrations"
+python manage.py makemigrations
+echo "Database migrations finished...."
+
+# Apply database migrations
 echo "Starting Apply database migrations"
 python manage.py migrate
 echo "Apply database migrations finished...."
