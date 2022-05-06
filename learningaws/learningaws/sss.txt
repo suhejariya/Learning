@@ -1,0 +1,5 @@
+python -m dataflow_cogroupbykey --runner=DataflowRunner --region=us-east1 --stagingLocation=gs://assignments-3470065/staging --temp_location=gs://assignments-3470065/temp --project=assignments-347006 --bq_table_name=assignments-347006.assignment_dummy.dummy --job_name=df-windwing --streaming --allow_unsafe_trigger
+
+
+
+/PTRsmX6xJU9fRt
